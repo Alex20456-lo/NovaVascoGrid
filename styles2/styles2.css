@@ -25,4 +25,19 @@ img {
   border-radius: 10px;
 }
 .conteudo {
+  display: flex;
+}
+.container .row {
+  /* background-color: black;
+  color: white;
+  border-radius: 10px;
+  width: 100%; */
+}
+.row ul li {
+  list-style-type: none;
+  /* background-color: black;
+  color: white; */
+}
+.col {
+  margin: auto;
 }
