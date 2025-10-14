@@ -27,12 +27,7 @@ img {
 .conteudo {
   display: flex;
 }
-.container .row {
-  /* background-color: black;
-  color: white;
-  border-radius: 10px;
-  width: 100%; */
-}
+
 .row ul li {
   list-style-type: none;
   /* background-color: black;
@@ -40,4 +35,12 @@ img {
 }
 .col {
   margin: auto;
+}
+.container .row img {
+  width: auto;
+  height: auto;
+}
+.favimg {
+  width: 30px;
+  height: auto;
 }
