@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900");
+
+/* ======= BASE ======= */
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #c4c3ca;
+  background-color: #1f2029;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+a {
+  color: #ffeba7;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #fff;
+}
+
+/* ======= CENTRALIZAÇÃO ======= */
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* ======= LOGO ======= */
+.logo {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+.logo img {
+  height: 26px;
+  width: auto;
+}
+
+/* ======= TOGGLE ======= */
+[type="checkbox"] {
+  position: absolute;
+  left: -9999px;
+}
+
+.checkbox + label {
+  position: relative;
+  display: block;
+  text-align: center;
+  width: 60px;
+  height: 16px;
+  border-radius: 8px;
+  margin: 20px auto;
+  cursor: pointer;
+  background-color: #ffeba7;
+}
+
+.checkbox + label:before {
+  content: "\eb4f";
+  font-family: "unicons";
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: #ffeba7;
+  background-color: #102770;
+  top: -10px;
+  left: -10px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 36px;
+  transition: all 0.5s ease;
+}
+
+.checkbox:checked + label:before {
+  transform: translateX(44px) rotate(-270deg);
+}
+
+/* ======= CARTÃO 3D ======= */
+.card-3d-wrap {
+  position: relative;
+  width: 400px; /* menor largura para ajustar o layout */
+  height: 380px; /* altura ajustada para caber todo o conteúdo */
+  perspective: 800px;
+}
+
+.card-3d-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: all 600ms ease-out;
+  transform-style: preserve-3d;
+}
+
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  background-color: #2a2b38;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 300%;
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  backface-visibility: hidden;
+  overflow: hidden; /* impede que o conteúdo ultrapasse */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.checkbox:checked ~ .card-3d-wrap .card-3d-wrapper {
+  transform: rotateY(180deg);
+}
+
+/* ======= CONTEÚDO ======= */
+.center-wrap {
+  width: 90%;
+  max-width: 320px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h4 {
+  font-weight: 600;
+  color: #ffeba7;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.form-group {
+  position: relative;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.form-style {
+  padding: 10px 15px 10px 45px;
+  height: 42px;
+  width: 100%;
+  font-weight: 500;
+  border-radius: 4px;
+  font-size: 13px;
+  outline: none;
+  color: #c4c3ca;
+  background-color: #1f2029;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(21, 21, 21, 0.4);
+  transition: 0.3s;
+}
+
+.form-style:focus {
+  background-color: #2a2b38;
+}
+
+.input-icon {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  height: 42px;
+  font-size: 20px;
+  line-height: 42px;
+  color: #ffeba7;
+}
+
+/* ======= BOTÃO ======= */
+.btn {
+  border-radius: 4px;
+  height: 40px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0 30px;
+  border: none;
+  background-color: #ffeba7;
+  color: #102770;
+  box-shadow: 0 8px 24px rgba(255, 235, 167, 0.3);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #102770;
+  color: #ffeba7;
+}
+
+/* ======= TEXTOS ======= */
+.link {
+  color: #c4c3ca;
+}
+.link:hover {
+  color: #ffeba7;
+}
+
+p {
+  font-weight: 500;
+  font-size: 13px;
+  margin-top: 10px;
+  text-align: center;
+}
